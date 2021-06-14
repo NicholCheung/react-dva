@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import { Link } from 'react-router-dom'
 import LayoutContainer from '@src/pages/layout/default'
 import IconFont from '@utils/icons/iconFont'
-import commonStyle from '@pages/common.less'
+import commonStyles from '@pages/common.less'
 import styles from './pageLoad.less'
 
 export default props => {
@@ -13,7 +13,7 @@ export default props => {
                 {
                     props.error
                         ? (
-                            <div className={commonStyle.center}>
+                            <div className={commonStyles.center}>
                                 <IconFont type="icon-jiazaishibai" className={`${styles.icon} ${styles.stateFail}`} />
                                 <div>
                                     <span className={styles.label}>哎呀！页面加载失败了！</span>

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from "react-router-dom";
 import { Layout } from 'antd';
-import '@pages/base.less'
 import styles from './default.less'
 import MainHeader from './components/header'
 import MainSider from './components/sider'
@@ -23,16 +22,13 @@ const DefaultLayout = withRouter(props => {
     const { match, children } = props
     return (
         <Layout className={styles.layoutContainer}>
+            <MainHeader collapsed={S_isCollapsed} changeSiderMenuCollapsed={changeSiderMenuCollapsed} />
             <Layout>
-                <MainHeader collapsed={S_isCollapsed} changeSiderMenuCollapsed={changeSiderMenuCollapsed} />
-                <Layout>
-                    <MainSider collapsed={S_isCollapsed} match={match} hideDefaultOpenKeys={isSiderMenuCollapsedCache} />
-                    <MainContent>{children}</MainContent>
-                </Layout>
+                <MainSider collapsed={S_isCollapsed} match={match} hideDefaultOpenKeys={isSiderMenuCollapsedCache} />
+                <MainContent {...props}>{children}</MainContent>
             </Layout>
         </Layout>
     )
-
 })
 
 DefaultLayout.propTypes = {

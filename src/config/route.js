@@ -23,9 +23,9 @@ export default {
         group: 'sider',
         component: 'home/index'
     },
-    '/a': {
-        key: '/a',
-        title: '模块a',
+    '/operation': {
+        key: '/operation',
+        title: '运营管理',
         icon: {
             type: 'icon-ziyuan',
             source: 'iconfont'
@@ -33,24 +33,43 @@ export default {
         menu: true,
         group: 'sider',
         children: {
-            '/a/a': {
-                key: '/a/a',
-                title: '模块a-a',
+            '/operation/list': {
+                key: '/operation/list',
+                title: '列表',
                 menu: true,
                 group: 'sider',
-                component: 'a/index'
+                component: 'operation/list'
             },
-            '/a/b': {
-                key: '/a/b',
-                title: '模块a-b',
+            '/operation/center': {
+                key: '/operation/center',
+                title: '管理',
+                menu: true,
+                group: 'sider',
+                component: 'operation/center'
+            }
+        }
+    },
+    '/development': {
+        key: '/development',
+        title: '开发管理',
+        icon: {
+            type: 'icon-ziyuan',
+            source: 'iconfont'
+        },
+        menu: true,
+        group: 'sider',
+        children: {
+            '/development/list': {
+                key: '/development/list',
+                title: '项目列表',
                 menu: true,
                 group: 'sider',
                 component: 'b/index'
             }
         }
     },
-    '/b': {
-        key: '/b',
+    '/resource': {
+        key: '/resource',
         title: '模块b',
         icon: {
             type: 'icon-ziyuan',
@@ -59,16 +78,9 @@ export default {
         menu: true,
         group: 'sider',
         children: {
-            '/b/a': {
-                key: '/b/a',
-                title: '模块b-a',
-                menu: true,
-                group: 'sider',
-                component: 'a/index'
-            },
-            '/b/b': {
-                key: '/b/b',
-                title: '模块b-b',
+            '/resource/list': {
+                key: '/resource/list',
+                title: '项目列表',
                 menu: true,
                 group: 'sider',
                 component: 'b/index'
